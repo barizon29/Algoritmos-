@@ -1,0 +1,48 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+/*
+obj principal: é mostrar na tela o valor da agua e a conta do desconto
+Entradas (o que a pessoa digita): QntdAgua: Real.   VLSlarioMin: Real.  
+Saida( ):ValorContaAgua: real.  ValorContaAguaLiquido(com desconto ja): real
+VLSlarioMin, QntdAgua, VLlitroAgua, VLdesconto
+Processo: 1º: Capturar Valores de Ent. 
+2º: Descobrir VLlitroAgua: (VLSlarioMin * 0,02)/1000
+3º: Descobrir ValorContaAgua: QntdAgua * VLlitroAgua
+4º:VLdesconto: ValorContaAgua * 0,15
+5º:ValorContaAguaCoDesconte: ValorContaAgua - (ValorContaAgua * 0,15)
+*/
+
+int main()
+{
+    float vlsalariomin = 0;
+    float qntdagua = 0;
+    float vllitroagua = 0;
+    float vlcontaagua = 0;
+    float vldesconto = 0;
+    float vlcontagualiq = 0;
+    
+    printf("Digite o valor do Salario Minimo atual: ");
+    scanf("%f" , &vlsalariomin);
+    printf("Digite a quantidade de litros gastos no mes: ");
+    scanf("%f", &qntdagua);
+    
+    vllitroagua = (vlsalariomin * 0,02)/1000;
+    vlcontaagua = qntdagua * vllitroagua;
+    vldesconto = vlcontaagua * 0,15;
+    vlcontagualiq = vlcontaagua - vldesconto;
+    
+    printf("--------------------------");
+    printf("Calculo Conta de Agua");
+    printf("--------------------------");
+    printf("O valor do salario minimo atual e de R$ "%0.2f", vlsalariomin");
+    printf("--------------------------");    
+    
+    return 0;
+}
