@@ -1,0 +1,31 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+/*se a temperatura for maior que 37,5 mostrar que está com febre*/
+
+int main()
+{
+    float temperatura = 0;
+    
+    printf("Qual a sua temperatura atual: ");
+    scanf("%F", &temperatura);
+    
+    if (temperatura >= 37.5){
+        printf("Você está com febre");
+    }
+    
+    if (temperatura < 37.5){
+        printf("Você está bem \n");
+    }
+    
+    printf("Cuide-se sempre");
+    
+    return 0;
+}
